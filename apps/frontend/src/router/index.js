@@ -1,0 +1,50 @@
+import { createRouter, createWebHistory } from 'vue-router'
+
+// Import your views
+import Dashboard from '../views/Dashboard.vue'
+import Login from '../components/Auth/Login.vue'
+import Registration from '../components/Auth/Registration.vue'
+import CarsManagement from '../components/Cars/CarsManagement.vue'
+import CarsPage from '../views/pages/CarsPage.vue'
+import AppointmentCard from '../components/Appointments/AppointmentCard.vue'
+import AdminAppoinmentsManagemement from '../views/AdminAppoinmentsManagemement.vue'
+import UserAppointmentPage from '../views/UserAppointments.vue'
+import CarInventory from '../views/pages/CarInventory.vue'
+import Dealers from '../views/pages/Dealers.vue'
+import UserManagement from '../views/pages/UserManagement.vue'
+import CarComparison from '../views/pages/CarComparison.vue'
+import HomeView from '../views/HomeView.vue'
+import ContactPage from '../views/ContactPage.vue'
+import GoogleForm from  '../views/GoogleForm.vue'
+import About from '../views/pages/About.vue'
+import ForgotPassword from '../components/Auth/ForgotPassword.vue'
+import ResetPassword from '../components/Auth/ResetPassword.vue'
+
+const routes = [
+  { path: '/dashboard', name: 'dashboards', component: Dashboard },
+  { path: '/login', name: 'login', component: Login },
+  { path: '/register', name: 'registration', component: Registration },
+  { path: '/cars-management', name: 'cars-management', component: CarsManagement },
+  { path: '/cars-page', name: 'cars-page', component: CarsPage },
+  { path: '/appointments', name: 'appointments', component: AppointmentCard },
+  { path: '/appointmentpage', name: 'appointmentpage', component: UserAppointmentPage },
+  { path: '/adminappointment', name: 'adminappointment', component: AdminAppoinmentsManagemement },
+  { path: '/car-inventory', name: 'car-inventorys', component: CarInventory },
+  { path: '/dealers', name: 'dealer', component: Dealers },
+  { path: '/user-management', name: 'user-management', component: UserManagement },
+  { path: '/car-comparison', name: 'car-comparison', component: CarComparison },
+  { path: '/', name: 'home', component: HomeView },
+  { path: '/contact', name: 'contact', component: ContactPage },
+  { path: '/google-form', name: 'google-form', component: GoogleForm },
+  { path: '/about', name: 'about', component: About },
+  { path: '/forgot-password', name: 'forgot-password', component: ForgotPassword },
+  { path: '/reset-password', name: 'reset-password', component: ResetPassword }
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
+
+
+export default router

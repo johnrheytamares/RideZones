@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ridezone
+    env: php
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build:frontend && cd apps/backend && composer install --no-dev --optimize-autoloader
+    startCommand: cd apps/backend/public && php -S 0.0.0.0:$PORT
+    autoDeploy: true
