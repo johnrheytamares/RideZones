@@ -1,0 +1,7 @@
+node_modules
+apps/frontend/node_modules
+apps/backend/vendor
+.git
+.gitignore
+README.md
+.env.example
