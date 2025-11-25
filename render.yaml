@@ -1,7 +1,7 @@
 services:
   - type: web
     name: ridezones
-    env: docker
+    env: php
     region: oregon
     plan: free
     buildCommand: npm install && npm run build:frontend && cd apps/backend && composer install --no-dev --optimize-autoloader
